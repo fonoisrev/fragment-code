@@ -9,7 +9,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>jsonsurfe-rusage</module>
+        <module>jsonsurfer-usage</module>
+        <module>code-similarity</module>
     </modules>
 
 
