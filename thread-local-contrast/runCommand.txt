@@ -1,0 +1,2 @@
+vm option:
+-javaagent:C:\Users\lenovo\.m2\repository\com\alibaba\transmittable-thread-local\2.6.1\transmittable-thread-local-2.6.1.jar
