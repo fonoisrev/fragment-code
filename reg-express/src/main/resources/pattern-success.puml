@@ -1,0 +1,30 @@
+@startuml
+
+
+object "Pattern$Start" as start
+object "Pattern$Single" as single123{
+    int c = '{'
+}
+object "Pattern$Curly" as curly
+object "Pattern$5" as 5
+object "Pattern$Ctype" as ctype
+object "Pattern$CharProperty" as charProperty
+object "Pattern$Single" as single125{
+    int c = '}'
+}
+object "Pattern$LastNode" as last
+object "Pattern$Node" as node {
+    boolean match { return true;}
+}
+
+start -> single123 : next
+single123 -> curly : next
+curly --> 5 : atom
+5 --> ctype : lhs
+5 --> charProperty : rhs
+5 --> node : next
+curly --> single125 : next
+single125 --> last : next
+last --> node : next
+
+@enduml

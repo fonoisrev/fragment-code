@@ -1,0 +1,46 @@
+@startuml
+
+object "Pattern$Start" as start
+object "Pattern$Single" as single123{
+    int c = '{'
+}
+object "Pattern$Prolog" as prolog
+object "Pattern$LazyLoop" as loop
+object "Pattern$Node" as node {
+    boolean match { return true;}
+}
+object "Pattern$GroupHead" as groupHead
+object "Pattern$Branch" as branch{
+    Pattern$Node[] atoms
+    int size
+}
+object "Pattern$Dot" as dot
+object "Pattern$Single" as single10{
+    int c = '\\n'
+}
+object "Pattern$BranchConn" as branchConn
+
+object "Pattern$Single" as single125{
+    int c = '}'
+}
+object "Pattern$LastNode" as last
+
+
+start -> single123 : next
+single123 -> prolog : next
+prolog --> loop : loop
+prolog --> node : next
+loop --> groupHead : body
+groupHead --> branch : next
+branch --> dot : atom[0]
+dot --> branchConn : next
+branch --> single10 : atom[1]
+single10 --> branchConn : next
+branch --> branchConn : conn
+branchConn --> loop : next
+branch --> node : next
+loop --> single125 : next
+single125 --> last : next
+last --> node : next
+
+@enduml
