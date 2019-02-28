@@ -19,6 +19,12 @@
         <module>jsonsurfer-usage</module>
         <module>code-similarity</module>
         <module>thread-local-contrast</module>
+        <module>dubbo-usage</module>
+        <module>nio</module>
+        <module>map-reduce</module>
+        <module>proxy</module>
+        <module>plain-javassist</module>
+        <module>reg-express</module>
     </modules>
 
 
