@@ -19,7 +19,7 @@
         <module>jsonsurfer-usage</module>
         <module>code-similarity</module>
         <module>thread-local-contrast</module>
-        <module>dubbo-usage</module>
+        <module>dubbo-spring-boot</module>
         <module>nio</module>
         <module>map-reduce</module>
         <module>proxy</module>
